@@ -1,0 +1,16 @@
+extends layout
+
+block content
+  div.container
+    div.twelve.column(style="text-align:center;")
+      h1= title
+      h5 Post those extra long tweets to Twitter easily.
+      div
+        a.button.button-primary(href="/auth/twitter") Sign in with Twitter
+      div(id='tweet-container')
+      script(type='text/javascript').
+        window.onload = function() {
+          createTweet('601829192062390273');
+          createTweet('601829194578972672');
+          createTweet('601829196587995136');
+        };

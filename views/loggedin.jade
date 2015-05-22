@@ -1,0 +1,32 @@
+extends layout
+
+block content
+  div.container
+    div.row
+      div.twelve.column(style="text-align:center;")
+        h1= title
+        div
+          h5 Welcome @#{user}! <a href="/logout" class="logout">logout</a>
+    div#submitform
+      div.row
+        div.one.columns &nbsp;
+        div.ten.columns(style="text-align:center;")
+          textarea.auto-textarea(id="longtweet", style="height: 100px; width: 100%;", placeholder="Put your long tweet here...")
+        div.one.columns &nbsp;
+      div.row
+        div.one.columns &nbsp;
+        div.ten.columns
+          button.button.button-primary.u-pull-right#submitbtn(onclick="submitStorm()") Post Storm!
+        div.one.columns &nbsp;
+      div.row#preview-container(style="display: none;")
+        div.one.columns &nbsp;
+        div.ten.columns
+          h4 Preview of tweets:
+          div#preview
+        div.one.columns &nbsp;
+    div.row#posted(style="display: none;")
+      div.one.columns &nbsp;
+      div.ten.columns
+        h2 Success!
+        div#tweet-container
+      div.one.columns &nbsp;

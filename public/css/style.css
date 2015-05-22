@@ -1,0 +1,11 @@
+body {
+  padding: 50px;
+}
+
+.auto-textarea {
+  height: auto;
+}
+
+.logout {
+  font-size: 70%;
+}
